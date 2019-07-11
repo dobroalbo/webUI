@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web-Interface</title>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700&display=swap" rel="stylesheet">
+	  
+<style>
+
+.material-icons.white { color: lightgray;border:1px solid black; }
+
+
+*{
+margin:0px;
+box-sizing:border-box;
+}
+
+html{
+height:100%;
+min-height:700px;
+min-width:1000px;
+
+}
+
+
+
+body{
+width:inherit;
+min-height:700px;
+user-select: none;
+height:100%;
+
+}
+body::after {
+width:1920px;
+min-height:700px;
+height:100%;
+  content: "";
+  background: url(source/bg.jpg);
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+.bord{
+border:1px solid lightgray;
+}
+#fr_0i{
+
+width:500px;
+position:absolute;
+left:10px;
+top:10px;
+background:white;
+}
+#fr_0_0{
+user-select: none;
+font-family: 'Open Sans', sans-serif;
+color:#48b774;
+border-bottom:1px solid gray;
+
+height:40px;
+}
+#fr_0_1{
+border-bottom:1px solid gray;
+
+
+}
+#fr_0_2{
+border-bottom:1px solid gray;
+height:50px;
+
+}
+
+
+
+#fr_1{
+
+width:500px;
+position:absolute;
+left:600px;
+top:10px;
+background:white;
+}
+
+#fr_1_0{
+user-select: none;
+font-family: 'Open Sans', sans-serif;
+color:#48b774;
+border-bottom:1px solid gray;
+background:;
+height:40px;
+}
+#fr_1_1{
+border-bottom:1px solid gray;
+height:50px;
+
+}
+#fr_2{
+
+width:1100px;
+position:absolute;
+left:10px;
+top:200px;
+background:white;
+}
+#fr_2_0{
+
+user-select: none;
+font-family: 'Open Sans', sans-serif;
+color:#48b774;
+border-bottom:1px solid gray;
+background:;
+height:40px;
+}
+
+#fr_2_1{
+border-bottom:1px solid gray;
+height:50px;
+
+}
+.menu_fr{
+float:right;
+
+}
+.nameVkl{
+float:left;
+}
+
+.fullScreen{
+background:white;
+
+
+width:100%;
+z-index:5;
+position:absolute;
+left:0px;
+top:0px;
+}
+
+.a{
+
+width:500px;
+position:absolute;
+left:10px;
+top:10px;
+background:white;
+}
+
+
+.minVers{
+width:auto;
+height:auto;
+float:left;
+background:white;
+position:absolute;
+
+}
+
+.norm{
+height:auto;
+width:500px;
+position:absolute;
+left:10px;
+top:10px;
+background:white;
+
+
+
+
+}
+
+.mini{
+width:auto;
+height:auto;
+float:left;
+background:white;
+position:absolute;
+
+}
+.full{
+background:white;
+height:calc(100% - 40px);
+width:100%;
+z-index:5;
+position:absolute;
+left:0px;
+top:0px;
+}
+.zer{
+position:absolute:
+top:0;
+left:0;
+
+}
+
+#footer{
+
+background:#fbfbfb;
+border-top:1px solid gray;
+height:40px;
+bottom:0px;
+
+
+
+}
+#main{
+width:inherit;
+height:calc(100% - 40px);
+min-height:700px;
+}
+.btnMenu:hover{
+cursor:pointer;
+}
+.create{
+margin:4px;
+font-size:30px;
+}
+.create:hover{
+cursor:pointer;
+color:orange;
+}
+.contMenu{
+text-align:center;
+padding:5px;
+position:absolute;
+width:250px;
+background:white;
+bottom:40px;
+visibility:hidden;
+}
+.minPan{
+border:1px solid gray;
+padding:5px;
+text-align:center;
+background:white;
+color:green;
+
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+td, th {
+  border: 1px solid lightgrey;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){
+background-color: #f1f1f1;
+
+}
+.wrapCont{
+height:auto;
+}
+</style>
+</head>
+<body>
+<div id="main">
+<div id="fr_0" class="norm bord" >
+
+	<div id="fr_0_0" class="menu">
+		<div class="nameVkl">СПИСОК ПРИБОРОВ</div>
+		<div class="menu_fr">
+		<i class="material-icons white min btnMenu">minimize</i>
+		<i class="material-icons white ful btnMenu">check_box_outline_blank</i>
+		<i class="material-icons white close btnMenu">clear</i></div>
+	
+	</div>
+	<div id="fr_0_wrap" class="wrapCont">
+	<div id="fr_0_1" class="cont">
+	<table>
+		<tr>
+			<th>имя прибора</th>
+			<th>тип прибора</th>
+			<th>местоположение</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+	</table>
+		
+	
+	
+	</div>
+	
+	</div>
+</div>
+
+
+
+<div id="fr_1" class="products bord">
+	<div id="fr_1_0" class="menu">
+		<div class="nameVkl">СОБЫТИЯ</div>
+		<div class="menu_fr">
+		<i class="material-icons white min btnMenu">minimize</i>
+		<i class="material-icons white ful btnMenu">check_box_outline_blank</i>
+		<i class="material-icons white close btnMenu">clear</i>
+		</div>
+	
+	</div>
+	<div id="fr_1_wrap" class="wrapCont">
+	
+
+		<div id="fr_1_1">тип события</div>
+	</div>
+</div>
+
+
+<div id="fr_2" class="products bord">
+	<div id="fr_2_0" class="menu">
+		<div class="nameVkl">СЕАНСЫ</div>
+		<div class="menu_fr">
+		<i class="material-icons white min btnMenu">minimize</i>
+		<i class="material-icons white ful btnMenu">check_box_outline_blank</i>
+		<i class="material-icons white close btnMenu">clear</i>
+		</div>
+	
+	
+	
+	</div>
+	<div id="fr_2_wrap" class="wrapCont">
+		<div id="fr_2_1">тип события</div>
+	</div>
+
+</div>
+</div>
+<div id="footer">
+	<div>
+		<div class="contMenu">ПЕРЕТАЩИТЕ НУЖНОЕ ОКНО</div>
+		<i class="material-icons create add">create_new_folder</i>
+	</div>
+</div>
+</body>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+
+console.log(screen.height);
+
+
+
+$("#main").css("width",screen.width);
+$("#footer").css("width",screen.width);
+class Frame {
+constructor(id){
+	this.frName=id;
+	this.resForm="norm";
+	this.memForm="";
+	this.top;
+	this.left;
+	this.btnMinT=id.children(".menu").children().children(".min");
+	this.btnFullT=id.children(".menu").children().children(".ful");
+	this.btnCloseT=id.children(".menu").children().children(".close");
+	
+	}
+
+}
+
+
+
+
+fr0=new Frame($( "#fr_0"));
+fr1=new Frame($( "#fr_1"));
+fr2=new Frame($( "#fr_2"));
+
+
+
+//console.log(fr1.frName.children(".menu").children().children(".min"));
+//console.log(fr1.btnMinT);
+/*$("#fr_0_0>div.menu_fr>i.min").on("click",function(){
+	fr.removeClass("a");
+	fr.removeClass("fullScreen");
+	$("#fr_0_wrap").hide();
+	fr.addClass("minVers");
+});
+*/
+
+
+$(".btnMenu").on("click", resize);
+
+
+
+
+function resize(e){
+
+
+var a=($(e.target));
+var b=a.parent().parent().parent();
+if(b.attr("id")=="fr_0"){
+doResize(a,fr0);
+
+}
+else if(b.attr("id")=="fr_1"){
+doResize(a,fr1);
+}
+else if(b.attr("id")=="fr_2"){
+doResize(a,fr2);
+}
+
+}
+
+function doResize(a,b){
+
+	if(a.attr("class")==b.btnMinT.attr("class")){
+	console.log("_");
+	console.log(b.resForm);
+		switch(b.resForm){
+		
+			case "norm":b.frName.removeClass("norm");b.frName.addClass("mini");b.resForm="mini";b.memForm="norm";console.log(0);
+			b.frName.children(".wrapCont").hide();
+			
+			break;
+			case "full":b.frName.removeClass("full");b.frName.addClass("mini");b.resForm="mini";b.memForm="full";console.log(1);
+			b.frName.children(".wrapCont").hide();
+			
+			break;
+			case "mini":b.frName.removeClass("mini");b.frName.addClass(b.memForm);b.resForm=b.memForm;console.log(2);
+			b.frName.children(".wrapCont").show();
+			
+			
+			break;
+			
+			
+		}
+	}
+	else if(a.attr("class")==b.btnFullT.attr("class")){
+	console.log("[]");
+	console.log();
+		switch(b.resForm){
+			case "norm":b.frName.removeClass("norm");b.frName.addClass("full");b.resForm="full";b.memForm="norm";fr0.frName.css("left","0");fr0.frName.css("top","0");break;
+			case "full":b.frName.removeClass("full");b.frName.addClass("norm");b.resForm="norm";break;
+			case "mini":b.frName.removeClass("mini");b.frName.addClass("full");b.resForm="full";b.memForm="mini";
+			b.frName.children(".wrapCont").show();
+			
+			break;
+			
+			
+		}
+		fr0.frName.css("left","0");fr0.frName.css("top","0");
+	}
+	
+	
+	else if(a.attr("class")==b.btnCloseT.attr("class")){
+	
+		var z=b.frName.children(".menu").children(".nameVkl").text()
+		var c=$("<div gy='" +b.frName.attr('id')+ "' class='minPan'>"+z+"</div> ").appendTo(".contMenu");
+		
+		b.frName.hide();
+		$(".minPan").draggable({containment: "window",stack: ".products",cursor: "all-scroll"});
+		$( ".minPan" ).draggable({
+				start: function( event, ui ) {$(".contMenu").css("visibility","hidden");$(event.target).css("visibility","visible");},
+				stop: function( event, ui ) {$(this).hide();        
+				$("#"+$(this).attr('gy')+"").show();
+				console.log(       
+				
+				);
+				}
+		});
+		
+		console.log("x");	
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+fr0.frName.draggable({containment: "#main",stack: ".products",cursor: "all-scroll",handle:"#fr_0_0"});	
+fr1.frName.draggable({containment: "#main",stack: ".products",cursor: "all-scroll",handle:"#fr_1_0"});
+fr2.frName.draggable({containment: "#main",stack: ".products",cursor: "all-scroll",handle:"#fr_2_0"});
+/*
+
+$("#fr_0_0>div.menu_fr>i.min").on("click",function(){
+	fr.removeClass("a");
+	fr.removeClass("fullScreen");
+	$("#fr_0_wrap").hide();
+	fr.addClass("minVers");
+});
+$("#fr_0_0>div.menu_fr>i.ful").on("click",function(){
+	
+	
+	fr.removeClass("a");
+	$( "#fr_0").addClass("fullScreen");
+	
+	});
+$("#fr_0_0>div.menu_fr>i.close").on("click",function(){$( "#fr_0" ).hide();});
+
+
+*/
+
+
+
+
+
+
+$(".add").on("click",openCont);
+function openCont(){
+var a=$(".contMenu").css("visibility");
+if(a=="visible"){
+$(".contMenu").css("visibility","hidden");
+}
+else $(".contMenu").css("visibility","visible");
+}
+
+let getXMLFile= function(path, callback){
+	let request =new XMLHttpRequest();
+	request.open("GET",path);
+	request.setRequestHeader("Content-Type", "text/xml");
+	request.onreadystatechange=function(){
+		if(request.readyState===4 & request.status === 200){
+			callback(request.responseXML);
+		
+		}
+	
+	};
+	request.send();
+
+};
+
+getXMLFile("list.xml", function(xml){
+	console.log(xml);
+});
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</html>
